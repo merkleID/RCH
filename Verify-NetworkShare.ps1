@@ -2,7 +2,7 @@ $ErrorActionPreference = 'Stop'
 
 $sharePath = '\\192.168.1.55\richmondevents'
 $driveLetter = 'S:'
-$password = 'r3v3nts!&'
+$password = 'PASSWORD_HERE'
 
 Write-Host 'Verifica delle unità di rete gia montate...'
 
