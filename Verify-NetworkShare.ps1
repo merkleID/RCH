@@ -2,6 +2,7 @@ $ErrorActionPreference = 'Stop'
 
 $sharePath = '\\192.168.1.55\NOME_SHARE'
 $driveLetter = 'S:'
+$username = 'revents'
 $password = 'PASSWORD_HERE'
 
 Write-Host 'Verifica delle unità di rete gia montate...'
@@ -16,7 +17,7 @@ foreach ($drive in $mappedDrives) {
     cmd.exe /c "net use $name /delete /y" | Out-Null
 }
 
-Write-Host "Connessione di $sharePath su $driveLetter..."
-cmd.exe /c "net use $driveLetter $sharePath $password /persistent:yes" | Out-Null
+Write-Host "Connessione di $sharePath su $driveLetter come $username..."
+cmd.exe /c "net use $driveLetter $sharePath /user:$username $password /persistent:yes" | Out-Null
 
 Write-Host "Share montato correttamente come $driveLetter"
