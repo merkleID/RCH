@@ -1,6 +1,6 @@
 $ErrorActionPreference = 'Stop'
 
-$sharePath = '\\192.168.1.55\richmondevents'
+$sharePath = '\\192.168.1.55\NOME_SHARE'
 $driveLetter = 'S:'
 $password = 'PASSWORD_HERE'
 
